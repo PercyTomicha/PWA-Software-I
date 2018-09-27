@@ -19,8 +19,12 @@ const CACHE_NAME = 'v1_cache_programador_fitness',
     'https://www.gstatic.com/firebasejs/5.5.0/firebase-messaging.js',
     './index.html',
     './Usuarios.html',
+    './Login.html',
     './js/val.js',
     './js/script.js',
+    './img/ProgramadorFitness.png',
+    './img/taxilingo_256.png',
+    './img/Taxi.jpg',
     './img/ProgramadorFitness.png',
     './img/favicon.png'
   ]

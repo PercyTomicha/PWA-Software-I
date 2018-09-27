@@ -45,30 +45,37 @@
                 <a class="navbar-brand" href="#">#TAXILINGO</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Inicio</a></li>
-                <li><a href="Usuarios.html">Lista de Usuarios</a></li>
+                <li><a href="index.html">Inicio</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="Login.html" class="active"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-sm-3" style="background: black">
-                <img src="./img/taxilingo_256.png" class="img-rounded" alt="Cinque Terre">
-                <h4 style="color:blanchedalmond;text-align: center">Primer Parcial de Ingeniería de Software I...</h4><hr>
-                <p style="color:blanchedalmond;">El Mejor Servicio de Taxi...</p>
-                <p style="color:blanchedalmond;">Y velando Siempre por su Seguridad, porque ustedes los Universitarios son el Futuro de Nuestro País...</p>
-            </div>
-            <div class="col-sm-6">
-                <h1>Bienvenidos a <a>#Taxilingo</a>...!</h1>
-            </div>
-            <div class="col-sm-6">
-                <img src="./img/Taxi.jpg" class="img-rounded" alt="Cinque Terre">
-            </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" style="background-color: black">
+                <form class="form-signin" role="form" method="POST" action="{{ url('/login') }}">
+                    <br>
+                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                        <h3 style="color: #fff;">Correo Electrónico</h3>
+                        <input id="email" type="email" class="form-control" name="email" placeholder="Código" required="" value="" required autofocus>
+                    </div>
+                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <h3 style="color: #fff;">Contraseña</h3>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña" required="" value="" required autofocus>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success">Iniciar Sesión</button>
+                    <a "btn btn-link" href="{{ url('/password/reset') }}"><small style="color: #fff;">¿Olvidaste tu Contraseña?</small></a>
+                    <!--
+                    <p class="text-muted text-center"><small>Do not have an account?</small></p>
+                    -->
+                    <br>
+                    <br>
+                </form>
             </div>
         </div>
     </div>
